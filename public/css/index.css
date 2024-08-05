@@ -1,0 +1,53 @@
+.container {
+    width: 45%;
+    margin: 0 auto;
+    color: white;
+}
+
+.search-bar {
+    margin: 40px 0;
+    display: flex;
+}
+
+.search-bar label {
+    width: 200px;
+    margin-top: 5px;
+    font-size: 1.3rem;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #242424;
+    font-size: 16px;
+    outline: none;
+}
+
+.city-section {
+    margin: 40px 0;
+}
+
+.city-section h2 {
+    margin-bottom: 10px;
+}
+
+.city-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.city-table th, .city-table td {
+    color: white;
+    border-bottom: 2px solid;
+    padding: 30px 0;
+}
+
+.city-table th {
+    text-align: left;
+    color: white;
+}
+
+.city-table thead th {
+    color: white;
+}
