@@ -26,29 +26,47 @@
                 <div class="form-input-name">
                     <div class="firstname">
                         <label for="firstname">Fornavn</label>
-                        <input type="text" name="firstname" placeholder="Ola" required>
+                        <input type="text" name="firstname" placeholder="Ola" value="{{old('firstname')}}">
+                        @error('firstname')
+                        <p style="margin:5px 0; color:red;">{{$message}}</p>
+                        @enderror
                     </div>
                     <div class="lastname">
                         <label for="lastname">Etternavn</label>
-                        <input type="text" name="lastname" placeholder="Normann" required>
+                        <input type="text" name="lastname" placeholder="Normann" value="{{old('lastname')}}">
+                        @error('firstname')
+                        <p style="margin:5px 0; color:red;">{{$message}}</p>
+                        @enderror
                     </div>
                 </div>
                 <div class="form-input">
                     <label for="email">E-post</label>
-                    <input type="text" name="email" id="email" placeholder="Olanormann@domene.no" required>
+                    <input type="text" name="email" id="email" placeholder="Olanormann@domene.no" value="{{old('email')}}">
+                    @error('firstname')
+                    <p style="margin:5px 0; color:red;">{{$message}}</p>
+                    @enderror
                 </div>
                 <div class="form-input">
                     <label for="phone">Telefon</label>
-                    <input type="text" name="phone" id="phone" placeholder="48056693" required>
+                    <input type="text" name="phone" id="phone" placeholder="48056693" value="{{old('phone')}}">
+                    @error('firstname')
+                    <p style="margin:5px 0; color:red;">{{$message}}</p>
+                    @enderror
                 </div>
                 <div class="form-input">
                     <label for="password">Passord</label>
-                    <input type="password" name="password" id="password" placeholder="Passord" required>
+                    <input type="password" name="password" id="password" placeholder="Passord" value="{{old('password')}}">
+                    @error('firstname')
+                    <p style="margin:5px 0; color:red;">{{$message}}</p>
+                    @enderror
                 </div>
     
                 <div class="form-input">
                     <label for="town">By</label>
-                    <input type="text" name="town" id="town" placeholder="Ålesund" required>
+                    <input type="text" name="town" id="town" placeholder="Ålesund" value="{{old('town')}}">
+                    @error('firstname')
+                    <p style="margin:5px 0; color:red;">{{$message}}</p>
+                    @enderror
                 </div>
                 <div class="form-input">
                     <button type="submit">Registrer</button>
@@ -56,7 +74,5 @@
             </form>
         </div>
     </div>
-
-    <script src="{{ asset('js/registration.js') }}"></script>
 </body>
 </html>

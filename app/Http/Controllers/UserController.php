@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -39,16 +40,18 @@ class UserController extends Controller
     }
 
     public function login(Request $request) {
-        $incommingFields = $request->validate( [
-            'loginemail' => 'required',
-            'loginpassword' => 'required'
+        $incomingFields = $request->validate([
+            'loginemail' => ['required', 'email'],
+            'loginpassword' => 'required',
         ]);
-
-        if (auth()->attempt(['email' => $incommingFields['loginemail'], 'password' => $incommingFields['loginpassword']])) {
-        $request->session()->regenerate();
-        return redirect('/');        
-        } else {
-             return redirect('/login'); // Bør referdiggjøres -> tilbakemelding
+    
+        if (Auth::attempt(['email' => $incomingFields['loginemail'], 'password' => $incomingFields['loginpassword']])) {
+            $request->session()->regenerate();
+            return redirect('/')->with('message', 'Du er nå innlogget!');
         }
+    
+        return back()->withErrors([
+            'login' => 'Brukerdetaljene matcher ikke.',
+        ])->onlyInput('loginemail');
     }
 }

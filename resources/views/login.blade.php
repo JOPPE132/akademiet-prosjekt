@@ -22,25 +22,31 @@
     </nav>
 
     <div class="container">
-        <h2>Logg inn</h2>
-        <div class="flex-container">
-            <form action="/login" method="POST" class="form-container">
-                @csrf
-                <div class="form-input">
-                    <div class="form-input-email">
-                        <label for="email">E-post</label>
-                        <input type="text" name="loginemail" id="email" placeholder="Olanormann@domene.no" required>
-                    </div>
-                    <div class="form-input-password">
-                        <label for="password">Passord</label>
-                        <input type="password" name="loginpassword" id="passord" placeholder="Passord" required>
-                    </div>
-                    <div class="form-input">
-                        <button type="submit">Logg inn</button>
-                    </div>
+    <h2>Logg inn</h2>
+    <div class="flex-container">
+        <form action="/login" method="POST" class="form-container">
+            @csrf
+            <div class="form-input">
+                <div class="form-input-email">
+                    <label for="email">E-post</label>
+                    <input type="text" name="loginemail" id="email" placeholder="Olanormann@domene.no" value="{{ old('loginemail') }}">
+                    @error('loginemail')
+                        <p style="margin: 5px 0; color: red;">{{ $message }}</p>
+                    @enderror
+                    @if ($errors->has('login'))
+                    <p style="margin: 5px 0; color: red;">{{ $errors->first('login') }}</p>
+                    @endif
                 </div>
-            </form>
-        </div>
+                <div class="form-input-password">
+                    <label for="password">Passord</label>
+                    <input type="password" name="loginpassword" id="password" placeholder="Passord">
+                </div>
+                <div class="form-input">
+                    <button type="submit">Logg inn</button>
+                </div>
+            </div>
+        </form>
     </div>
+</div>
 </body>
 </html>
