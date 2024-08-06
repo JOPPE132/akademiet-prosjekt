@@ -74,3 +74,22 @@
     opacity: .80;
   }
 
+  /** MEDIA QUERIES **/
+
+  @media (max-width: 750px) {
+    .container {
+        width: 60%;
+    }
+
+    .container h2 {
+        font-size: 1.2rem;
+    }
+
+    .form-input-email label {
+        font-size: 1rem;
+    }
+
+    .form-input-password label {
+        font-size: 1rem;
+    }
+  }

@@ -43,3 +43,49 @@
     display: flex;
     gap: 50px;
 }
+
+/** MEDIA QUERIES **/
+
+@media (max-width: 1200px) {
+
+}
+
+@media (max-width: 750px) {
+    /** NAV BAR **/
+    .nav-list li {
+        font-size: 1rem;
+    }
+    
+    .nav-item a {
+        font-size: 1rem;
+    }
+
+    .nav-list {
+        width: 60%;
+    }
+}
+
+@media (max-width: 600px) {
+    /** NAV BAR **/
+    .nav-list li {
+        font-size: 1rem;
+        text-decoration: none;
+        color: #242424;
+    }
+    
+    .nav-item a {
+        text-decoration: none;
+        display: block;
+        font-size: 1rem;
+        color: #242424;
+    }
+
+    .nav-right {
+        display: flex;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 440px) {
+    /** HAMBURGER **/
+}

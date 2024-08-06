@@ -13,7 +13,7 @@
         <ul class="nav-list">
             <li class="nav-item"><a href="/">Hjem</a></li>
             <div class="nav-right">
-                <li class="nav-item"><a href="/register">Register</a></li>
+                <li class="nav-item"><a href="/register">Registrer</a></li>
                 <li class="nav-item"><a href="/login">Logg inn</a></li>
             </div>
         </ul>
