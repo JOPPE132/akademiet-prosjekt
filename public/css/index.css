@@ -1,12 +1,15 @@
 .container {
-    width: 45%;
     margin: 0 auto;
     color: white;
+    background-color: #242424;
 }
 
 .search-bar {
-    margin: 40px 0;
+    padding: 40px 0 20px 0;
     display: flex;
+    justify-content: space-between;
+    margin: auto;
+    width: 55%;
 }
 
 .search-bar label {
@@ -24,12 +27,23 @@
     outline: none;
 }
 
-.city-section {
+.city-section-popular {
     margin: 40px 0;
+    width: 55%;
+    margin: auto;
 }
 
-.city-section h2 {
+.city-section-popular h2 {
     margin-bottom: 10px;
+}
+
+.city-section-favorites {
+    width: 55%;
+    margin: auto;
+}
+
+.city-section-favorites h2 {
+    margin-top: 100px;
 }
 
 .city-table {
@@ -54,8 +68,14 @@
 }
 
 @media (max-width: 750px) {
-    .container {
-        width: 60%;
+    .city-section-popular {
+        margin: 40px 0;
+        width: 70%;
+        margin: auto;
+    }
+
+    .search-bar {
+        width: 70%;
     }
 
     .search-bar input {
@@ -73,6 +93,13 @@
     .city-table th, .city-table td {
         font-size: 0.8rem;
     }
+
+    .city-section-favorites {
+        width: 70%;
+    }
+
+
+
 }
 
 @media(max-width: 600px) {

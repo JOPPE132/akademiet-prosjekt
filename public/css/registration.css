@@ -1,5 +1,5 @@
 .container {
-    width: 45%;
+    width: 55%;
     margin: 0 auto;
     color: white;
 }
@@ -84,6 +84,7 @@
 /* Lånt fra https://getcssscan.com/css-buttons-examples */
 .form-input button:hover, .form-input button:focus {
   opacity: .80;
+  background-color: #d07e7e;
 }
 
 /** MEDIA QUERIES **/ 

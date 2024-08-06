@@ -19,7 +19,7 @@
                 @endguest
     
                 @auth
-                <li class="nav-item">Hei, {{ Auth::user()->firstname }}</li>
+                <li class="nav-item"><a>Hei, {{ Auth::user()->firstname }}</a></li>
                 <li class="nav-item">
                     <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logg ut</a>
                     <form id="logout-form" action="/logout" method="POST" style="display: none;">
@@ -29,6 +29,12 @@
                 @endauth
             </div>
         </ul>
+
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
     </nav>
 
     <div class="container">
@@ -36,7 +42,9 @@
             <label for="search">Søk etter sted</label>
             <input type="text" id="search" placeholder="Barcelona">
         </div>
-        <div class="city-section">
+
+
+        <div class="city-section-popular">
             <h2>Populære byer</h2>
             <table class="city-table">
                 <thead>
@@ -75,30 +83,17 @@
                 </tbody>
             </table>
         </div>
-        <div class="city-section">
-            <h2>Drøm deg bort</h2>
-            <table class="city-table">
-                <tbody>
-                    <tr>
-                        <td>Alicante</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Roma</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
 
-        <div class="city-section">
+        <div class="city-section-favorites">
             <h2>Dine favoritter</h2>
             <table class="city-table">
                 <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
                     <tr>
                         <td></td>
                         <td></td>
