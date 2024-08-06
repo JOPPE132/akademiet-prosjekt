@@ -52,6 +52,20 @@
     flex-direction: column;
 }
 
+.password-container {
+    position: relative;
+    color: black;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    font-size: 25px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
 /* Lånt fra https://getcssscan.com/css-buttons-examples */
 .form-input button {
   background-color: white;

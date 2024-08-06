@@ -34,21 +34,22 @@ class UserController extends Controller
      * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
     public function register(Request $request) {
-        $incommingFields = $request->validate([
+        $incomingFields = $request->validate([
             'firstname' => 'required',
             'lastname' => 'required',
             'email' => ['required', 'email', Rule::unique('users', 'email')],
             'phone' => 'required',
-            'password' => ['required', 'min:8', 'max:20'],
+            'password' => ['required', 'min:8', 'max:20', 'confirmed'],
             'town' => 'required'
         ]);
-
-        $incommingFields['password'] = bcrypt($incommingFields['password']);
-
-        $user = User::create($incommingFields);
+    
+        $incomingFields['password'] = bcrypt($incomingFields['password']);
+    
+        $user = User::create($incomingFields);
         auth()->login($user);
         return redirect('/');
     }
+    
 
     /**
      * Summary of logoutd
@@ -68,15 +69,22 @@ class UserController extends Controller
         $incomingFields = $request->validate([
             'loginemail' => ['required', 'email'],
             'loginpassword' => 'required',
+        ], [
+            'loginemail.required' => 'The email field is required.',
+            'loginemail.email' => 'The email must be a valid email address.',
+            'loginpassword.required' => 'The password field is required.',
+        ], [
+            'loginemail' => 'email',
+            'loginpassword' => 'password',
         ]);
     
         if (Auth::attempt(['email' => $incomingFields['loginemail'], 'password' => $incomingFields['loginpassword']])) {
             $request->session()->regenerate();
-            return redirect('/')->with('message', 'Du er nå innlogget!');
+            return redirect('/');
         }
     
         return back()->withErrors([
-            'login' => 'Brukerdetaljene matcher ikke.',
+            'login' => 'E-mail or password does not match.',
         ])->onlyInput('loginemail');
     }
 }
