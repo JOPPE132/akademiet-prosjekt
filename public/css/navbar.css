@@ -29,11 +29,6 @@
     padding: 27px 25px;
 }
 
-.nav-list li:hover {
-    box-shadow: 0 -5px 0 #fff inset,
-    500px 0 0 rgba(255, 255, 255, 0.02) inset;
-}
-
 .nav-item a:hover {
     box-shadow: 0 -5px 0 #d07e7e inset,
     500px 0 0 rgba(255, 255, 255, 0.02) inset;
@@ -49,9 +44,6 @@
     display: flex;
     gap: 50px;
 }
-
-
-
 
 .hamburger {
     display: none;
@@ -151,11 +143,17 @@
     .nav-item {
         padding: 0;
         width: 100%;
+        box-shadow: none;
     }
 
     .nav-item a {
         padding: 20px 10px;
         border-top: 1px solid black;
+    }
+
+    .nav-item a:hover {
+        box-shadow: none;
+        transition: 0s;
     }
 
     .nav-right {
