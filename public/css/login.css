@@ -6,6 +6,11 @@
     color: white;
 }
 
+.container h2 {
+    padding: 40px 0;
+    margin: 0;
+}
+
 .form-input {
     display: flex;
     flex-direction: column;

@@ -6,7 +6,7 @@ use App\Http\Controllers\UserController;
 
 /** Routes related to HomeController */
 
-Route::get('/', [HomeController::class, 'index'])->name('index');
+Route::get('/', [HomeController::class, 'index']);
 
 
 
