@@ -17,6 +17,11 @@
                 <li class="nav-item"><a href="/login">Logg inn</a></li>
             </div>
         </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
     </nav>
     <div class="container">
         <h2>Registrer en ny bruker</h2>

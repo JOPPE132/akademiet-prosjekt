@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
 </head>
 <body>
-
     <nav class="navbar">
         <ul class="nav-list">
             <li class="nav-item"><a href="/">Hjem</a></li>
@@ -19,8 +18,12 @@
                 <li class="nav-item"><a href="/login">Logg inn</a></li>
             </div>
         </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
     </nav>
-
     <div class="container">
         <h2>Logg inn</h2>
         <div class="flex-container">

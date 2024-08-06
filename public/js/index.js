@@ -1,3 +1,17 @@
+const hamburger = document.querySelector(".hamburger");
+const navlist = document.querySelector(".nav-list");
+
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  navlist.classList.toggle("active");
+});
+
+document.querySelectorAll(".nav-list").forEach(n => n.addEventListener("click", () => {
+  hamburger.classList.remove("active");
+  navlist.classList.remove("active");
+}));
+
+
 // Popular cities
 const cities = [
     { name: 'Trondheim', lat: 63.4305, lon: 10.3951 },

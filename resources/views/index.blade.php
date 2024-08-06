@@ -29,7 +29,6 @@
                 @endauth
             </div>
         </ul>
-
         <div class="hamburger">
             <span class="bar"></span>
             <span class="bar"></span>
@@ -42,8 +41,6 @@
             <label for="search">Søk etter sted</label>
             <input type="text" id="search" placeholder="Barcelona">
         </div>
-
-
         <div class="city-section-popular">
             <h2>Populære byer</h2>
             <table class="city-table">
@@ -83,7 +80,6 @@
                 </tbody>
             </table>
         </div>
-
         <div class="city-section-favorites">
             <h2>Dine favoritter</h2>
             <table class="city-table">
