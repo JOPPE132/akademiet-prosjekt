@@ -31,13 +31,17 @@ Stemmer godt med temperaturene som ligger for Trondheim på yr.no. Kunne kanskje
 
 Validering i registreringsskjema både i front- og backend.
 
-![image](https://github.com/user-attachments/assets/5672354a-da2e-48cd-aa84-10dbe22b6785)
+![image](https://github.com/user-attachments/assets/d3445c55-e041-415b-b3de-9a3811a569cf)
 
 Validering i innloggingsskjema.
 
-![image](https://github.com/user-attachments/assets/0276e45c-7826-41a7-bb19-b6c95330f643)
+![image](https://github.com/user-attachments/assets/59e89062-1632-4de5-b563-0873d3325c21)
 
+Hamburger menu ved (max-width: 440px) 
 
+![image](https://github.com/user-attachments/assets/e37eded6-d041-4df3-9df4-42e4bf42681d)
+
+![image](https://github.com/user-attachments/assets/1a430ea4-8832-41b1-8941-007b0ab0946e)
 
 ## Tiltenkt databasestruktur ved utvidelse
 
