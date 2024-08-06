@@ -1,18 +1,19 @@
-
-/**
- * Validate e-mail input from client. If the e-mail does not meet the standard e-mail
- * format, the client will recieve a notification under the input.
- */
 document.addEventListener('DOMContentLoaded', function() {
-    const emailInput = document.getElementById('email');
-    const form = emailInput.closest('form');
+    const emailInput = document.getElementById('email'); // Get the email input 
+    const form = emailInput.closest('form'); // Find the closest parent form
 
+    // Add a submit event listener to the form
     form.addEventListener('submit', function(event) {
-        if (!validateEmail()) {
+        if (!validateEmail()) { // Prevent form submission if email is invalid
             event.preventDefault();
         }
     });
 
+    /**
+     * Validates the entered email address. Checks if the email address entered in the emailinput input 
+     * matches a basic email address format using regular expressions.
+     * @returns  boolean True if the email is valid, false otherwise.
+     */
     function validateEmail() {
         const email = emailInput.value;
         const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/; // Regex pattern for valid email address

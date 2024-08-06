@@ -42,35 +42,35 @@
                 <thead>
                     <tr>
                         <th></th>
-                        <th>Dag x</th>
-                        <th>Dag y</th>
-                        <th>Dag z</th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>Trondheim</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td class="trondheim"></td>
+                        <td class="trondheim"></td>
+                        <td class="trondheim"></td>
                     </tr>
                     <tr>
                         <td>Ålesund</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td class="alesund"></td>
+                        <td class="alesund"></td>
+                        <td class="alesund"></td>
                     </tr>
                     <tr>
                         <td>Oslo</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td class="oslo"></td>
+                        <td class="oslo"></td>
+                        <td class="oslo"></td>
                     </tr>
                     <tr>
                         <td>Bergen</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td class="bergen"></td>
+                        <td class="bergen"></td>
+                        <td class="bergen"></td>
                     </tr>
                 </tbody>
             </table>
@@ -114,6 +114,6 @@
                 </tbody>
             </table>
         </div>
-    </div>
+        <script src="{{ asset('js/index.js')}}"></script>
 </body>
 </html>
