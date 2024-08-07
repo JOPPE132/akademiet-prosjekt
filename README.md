@@ -1,6 +1,33 @@
 # Akademiet prosjekt
 Prosjektet inneholder oppgaven som er gitt av Akademiet VGS i Ålesund.
 
+## Installasjon og kjøring
+Litt usikker på hva som kreves av programvare for å kjøre applikasjonen, spesielt på Mac. Jeg lastet ned Composer (verktøy for pakkeadministrasjon. Noe likt som npm for node) og XXAMP som inkluderer Apache, MySQL og PHP. Plasserte prosjektet i XXAMP/htdocs/dashboard/{prosjektmappe}. Her kan jeg kjøre "php artisan serve".
+
+Dersom du ikke har composer, må du laste ned composer å kjøre "composer install" (inn i roten av prosjektmappen) for å laste ned de nødvendige pakkene.
+
+## Databasetilkobling
+
+Koble til en database, lokal eller remote i ".env" filen i prosjektmappen. Ved utvikling benyttet jeg meg av en lokal database, derfor må du koble til din egen...
+
+Endre spesifikasjonene etter dine krav:
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=akademiet
+DB_USERNAME=root
+DB_PASSWORD=
+
+Når du har koblet til databasen, kan du kjøre "php artisan migrate" for å kjøre alle migration filer for å definere databasetabellene.
+
+## Kort fortalt
+
+1. Klon prosjektet og plasser det hvor du har din php kompilator.
+2. Last ned composer og kjør "composer install" i roten av prosjektmappen.
+3. Koble til din database og kjør "php artisan migrate".
+4. Kjør applikasjonen ved "php artisan serve".
+
 ## Skjermbilder
 ### 05.08
 Registrering av ny bruker. 
