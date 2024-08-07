@@ -43,16 +43,16 @@ Hamburger menu ved (max-width: 440px)
 
 ![image](https://github.com/user-attachments/assets/1a430ea4-8832-41b1-8941-007b0ab0946e)
 
-## Tiltenkt databasestruktur ved utvidelse
-
-![image](https://github.com/user-attachments/assets/2f2f8611-72f7-4df4-ae3b-80d331fa356e)
-
 ### 07.08
 
 Prøver å benytte laravels direktiver for bedre lesbarhet og vedlikehold. 
 
 ![image](https://github.com/user-attachments/assets/9e9a56f1-903e-44be-9d2b-190aed9e43e3)
 
+
+## Tiltenkt databasestruktur ved utvidelse
+
+![image](https://github.com/user-attachments/assets/2f2f8611-72f7-4df4-ae3b-80d331fa356e)
 
 
 ### Relasjonsforklaringer
@@ -63,3 +63,12 @@ Prøver å benytte laravels direktiver for bedre lesbarhet og vedlikehold.
 - **Bruker til påmelding:** En-til-mange (en bruker kan være påmeldt mange kurs).
 - **Kurs til påmelding:** En-til-mange (et kurs kan ha mange påmeldte).
 - **Lærer til kurs** En-til-mange (en lærer kan undervise i flere kurs).
+
+
+## Tilnærming og utfordringer
+
+Etter å ha sett en del på youtube/google la jeg fort merke til at laravel følger mvc (model-view-controller) design pattern, noe som jeg er kjent med og har jobbet med i java spring rammeverket. Blade minner meg også om thymeleaf, som også er en malmotor for java, på samme måte som laravel for php. Ved å benytte komponenter som navbar, footer etc, er det lett med gjenbruk. 
+
+Jeg tror koden er "godt" organisert. Jeg har ikke fått implementert noe funksjonaliteter i controller-klassene bortsett fra UserController da disse bare viser hvordan systemet har kunne blitt utvidet. 
+
+Utfordring? Design. Ikke veldig kreativ, noe som gjør det vanskelig å "utfordre" meg selv. Utseende kunne sett bedre ut om jeg hadde noe å utvikle etter.
