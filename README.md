@@ -47,6 +47,13 @@ Hamburger menu ved (max-width: 440px)
 
 ![image](https://github.com/user-attachments/assets/2f2f8611-72f7-4df4-ae3b-80d331fa356e)
 
+### 07.08
+
+Prøver å benytte laravels direktiver for bedre lesbarhet og vedlikehold. 
+
+![image](https://github.com/user-attachments/assets/9e9a56f1-903e-44be-9d2b-190aed9e43e3)
+
+
 
 ### Relasjonsforklaringer
 
