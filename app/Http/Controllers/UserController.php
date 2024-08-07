@@ -8,12 +8,12 @@ use Illuminate\Validation\Rule;
 use Illuminate\Support\Facades\Auth;
 
 /**
- * Summary of UserController
+ * UserController handles user registration, login and logout operations.
  */
 class UserController extends Controller
 {
     /**
-     * Summary of registration
+     * Shows the user registration form.
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
     public function registration() {
@@ -21,7 +21,7 @@ class UserController extends Controller
     }
 
     /**
-     * Summary of loginform
+     * Shows the user login form.
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
     public function loginform() {
@@ -29,7 +29,9 @@ class UserController extends Controller
     }
 
     /**
-     * 
+     * Registers a new user.
+     * Validates the incoming request, creates a new user and logs them in. 
+     * Redirects to home page.
      * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
@@ -52,7 +54,8 @@ class UserController extends Controller
     
 
     /**
-     * Summary of logoutd
+     * Logs the user out.
+     * Logs out the currently authenticated user and redirects them to the home page.
      * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
     public function logout() {
@@ -61,7 +64,10 @@ class UserController extends Controller
     }
 
     /**
-     * Summary of login
+     * Authenticate a user.
+     * Validates the incoming login credentials and attemps to log in the user.
+     * Redirects the user to the home page on successful authentication, or returns back
+     * with an error message.
      * @param \Illuminate\Http\Request $request
      * @return mixed|\Illuminate\Http\RedirectResponse
      */

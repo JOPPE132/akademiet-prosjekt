@@ -1,31 +1,9 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/registration.css') }}">
-</head>
-<body>
-    <nav class="navbar">
-        <ul class="nav-list">
-            <li class="nav-item"><a href="/">Hjem</a></li>
-            <div class="nav-right">
-                <li class="nav-item"><a href="/register">Registrer</a></li>
-                <li class="nav-item"><a href="/login">Logg inn</a></li>
-            </div>
-        </ul>
-        <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
-    </nav>
-    <div class="container">
-        <h2>Registrer en ny bruker</h2>
-        <div class="flex-container">
+@extends('layouts.app')
+
+@section('content')
+<div class="registration-container">
+    <h2>Registrer en ny bruker</h2>
+    <div class="flex-container">
             <form action="/register" method="POST" class="form-container">
                 @csrf
                 <div class="form-input-name">
@@ -90,7 +68,6 @@
                 </div>
             </form>
         </div>
-    </div>
-    <script src="{{ asset('js/registration.js')}}"></script>
-</body>
-</html>
+</div>
+<script src="{{ asset('js/registration.js')}}"></script>
+@endsection
