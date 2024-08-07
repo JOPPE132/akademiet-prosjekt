@@ -11,6 +11,7 @@ Route::get('/', [HomeController::class, 'index']);
 
 
 
+
 /** Routes related to Registration */
 
 // Route to display the registration form

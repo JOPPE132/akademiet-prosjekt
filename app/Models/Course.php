@@ -16,6 +16,4 @@ class Course extends Model
         'course_end_date',
         'teacher_id'
     ];
-
-    
 }
